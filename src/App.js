@@ -1,4 +1,5 @@
-
+import {useState,useEffect} from "react"
+import allMovies from "./data"
 
 const App = () => {
   return <div>

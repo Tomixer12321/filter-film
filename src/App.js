@@ -4,6 +4,14 @@ import allMovies from "./data"
 
 const App = () => {
   const [searchingText, setSearchingText] = useState("")
+  const [filteredMovies,setFilteredMovies]= useState([])
+
+  useEffect(()=>{
+    const moviesAlfterFilter=allMovies.filter((oneMovie)=>{
+      return oneMovie.title.toLowerCase().includes(searchingText.toLowerCase())
+    })
+    setFilteredMovies(moviesAlfterFilter)
+  },[searchingText])  
 
 
   return <div>
@@ -13,9 +21,8 @@ const App = () => {
       }/>
     </form>
     <div>
-      {allMovies.map( (oneMovie) => {
+      {filteredMovies.map( (oneMovie) => {
         const {id, image, title, age, tags, description } = oneMovie
-
 
         return <div key={id}>
             <img src={image} alt="" />

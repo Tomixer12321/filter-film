@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #141414;
+    color: #e5e5e5;
+}
+.movies-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.movies-box input{
+    margin: 10px;
+    outline: none;
+    font-size: 20px;
+}
+.all-movies{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.one-movie{
+    width: 300px;
+    box-sizing: 0px 0px 10px #e50914;
+    margin: 10px;
+    padding: 10px;
+}
+.one-movie img{
+    width: 100%;
+}

@@ -14,17 +14,17 @@ const App = () => {
   },[searchingText])  
 
 
-  return <div>
+  return <div className="movies-box">
     <form>
       <input type="text" placeholder="Hledaný film" onChange={
         (e) => setSearchingText(e.target.value)
       }/>
     </form>
-    <div>
+    <div className="all-movies">
       {filteredMovies.map( (oneMovie) => {
         const {id, image, title, age, tags, description } = oneMovie
 
-        return <div key={id}>
+        return <div key={id} className="one-movie">
             <img src={image} alt="" />
             <h2>{title}</h2>
             <p>{age}</p>
